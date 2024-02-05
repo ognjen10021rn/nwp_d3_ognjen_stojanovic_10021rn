@@ -1,0 +1,21 @@
+<div class="container mt-5">
+  <h2>Error list</h2>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Error</th>
+      <th>Date</th>
+      <th>Vacuum</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let error of errorList">
+      <td>{{ error.id }}</td>
+      <td>{{ error.message }}</td>
+      <td>{{ error.date }}</td>
+      <td>{{ error.vacuum.name }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

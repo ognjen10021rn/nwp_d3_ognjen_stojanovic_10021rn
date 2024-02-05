@@ -1,0 +1,25 @@
+<div class="container mt-5">
+  <h2>User List</h2>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Username</th>
+      <th>Vacuum status</th>
+      <th>START</th>
+      <th>STOP</th>
+      <th>DISCHARGE</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let vacuum of vacuums">
+      <td>{{ vacuum.id }}</td>
+      <td>{{ vacuum.name }}</td>
+      <td>{{vacuum.status}}</td>
+      <td><button (click)="onStart(vacuum.id)">Start</button></td>
+      <td><button (click)="onStop(vacuum.id)">Stop</button></td>
+      <td><button (click)="onDischarge(vacuum.id)">Discharge</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
